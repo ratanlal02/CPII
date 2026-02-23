@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package moduleThree;
+import java.util.Arrays;
 
 /**
  *
@@ -36,6 +37,34 @@ public class OneDArray {
         
         // print the last element of numArray
         System.out.println(numArray[numArray.length-1]);
+        
+        // Print all the elements of numArray using
+        //enhanced for loop
+        for(int x:numArray){
+            System.out.print(x+" ");
+        }
+        System.out.println("");
+        // Copy numArray into numArrayC
+        int[] numArrayC = numArray.clone();
+        numArrayC[1] = 12;
+        for(int x:numArrayC){
+            System.out.print(x+" ");
+        }
+        System.arraycopy(numArray, 0, numArrayC, 0, 2);
+        System.out.println("");
+        for(int x:numArrayC){
+            System.out.print(x+" ");
+        }
+        System.out.println("");
+        // Replace all the elements of numArray with 5
+        Arrays.fill(numArray, 5);
+        for(int x:numArray){
+            System.out.print(x+" ");
+        }
+        
+        // check equality of numArray and numArrayC
+        System.out.println(Arrays.equals(numArray, numArrayC));
+        
         
         
         
