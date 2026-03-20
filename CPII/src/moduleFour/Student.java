@@ -13,19 +13,24 @@ public class Student {
     private String name;
     private double gpa;
     private String major;
-    
+    // No-argument constructor
     public Student(){
         name = "Unknown";
         gpa = 0.0;
         major = "Unknown";
     }
-    
-    public Student(String nameIn, double gpaIn, String majorIn){
-        name = nameIn;
+    // Parameterized constructor
+    public Student(String name, double gpaIn, String majorIn){
+        this.name = name;
         gpa = gpaIn;
         major = majorIn;
     }
-    
+    public Student(String nameIn){
+        name = nameIn;
+    }
+    public Student(double gpaIn){
+        gpa = gpaIn;
+    }
     // Accessor or Getter methods
     public String getName(){
         return name;
@@ -40,8 +45,8 @@ public class Student {
     }
     
     // Mutator or setter method
-    public void setName(String nameIn){
-        name = nameIn;
+    public void setName(String name){
+        this.name = name;
     }
     
     public void setGpa(double gpaIn){
