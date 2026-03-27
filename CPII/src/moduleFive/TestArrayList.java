@@ -24,6 +24,15 @@ public class TestArrayList {
         System.out.println(list.get(1));
         // remove element at index 1
         list.remove(1);
+        // Write code to display the list
+        for(int i = 0; i < list.size(); i++){
+            System.out.print(list.get(i)+" ");
+        }
+        System.out.println("");
+        list.set(0, 7);
+        for(Integer x : list){
+            System.out.print(x +" ");
+        }
         
         
         
