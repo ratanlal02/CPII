@@ -56,7 +56,17 @@ public class Employee {
     
     @Override
     public String toString(){
-     return firstName+ "\n "+ lastName+"\n"+ SSN;
+     return "FirstName:"+firstName+ "\nLastName:"+ lastName+"\nSSN:"+ SSN;
+    }
+    
+    @Override
+    public boolean equals(Object obj){
+        Employee emp = (Employee) obj;
+        if (this.getFullName().equals(emp.getFullName()))
+            return true;
+        else
+            return false;
+    
     }
     
 }
