@@ -8,10 +8,12 @@ package moduleFive;
  *
  * @author rlal
  */
-public class Employee {
+public abstract class Employee {
     private String firstName;
     private String lastName;
     private String SSN;
+    
+    public abstract double estimatedMonthlySalary();
     
     public Employee(){
         firstName = "Unknown";

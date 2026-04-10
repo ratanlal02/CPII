@@ -20,6 +20,7 @@ public class Main {
         Employee emp2 = new Employee("X", "Y", "123");
         System.out.println(emp1.equals(emp2));
         */
+        /*
         Employee emp = new HourlyEmployee("X", "Y", 
                 "2344", 30.5, 5);
         System.out.println((emp instanceof Employee));
@@ -28,6 +29,20 @@ public class Main {
         System.out.println((emp instanceof Employee));
         System.out.println((emp instanceof Object));
         System.out.println((emp instanceof HourlyEmployee));
+        */
+        System.out.println("What is estimated monthly salary of Hourly Employee");
+        String empType = "Hourly";
+        Employee emp = null;
+        switch(empType){
+            case "Hourly":
+                emp = new HourlyEmployee("X", "Y", 
+                "2344", 30.5, 5);
+                break;
+            case "Faculty":
+                emp = null;       
+        }
+        
+        System.out.println(emp.estimatedMonthlySalary());
         
         
     }

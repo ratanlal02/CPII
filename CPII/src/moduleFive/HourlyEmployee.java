@@ -38,4 +38,9 @@ public class HourlyEmployee extends Employee{
         return super.toString() + 
                 "\n"+ hourlyRate+ "\n"+ hrsWorked;
     }
+
+    @Override
+    public double estimatedMonthlySalary() {
+        return 4*calculateWeeklySalary();
+    }
 }
