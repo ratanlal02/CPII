@@ -113,21 +113,40 @@ public class JavaQuest {
                 // 50% times, 
                 // if it is successful, increase the score and continue 
                 // the game, otherwise flee attempt unsuccessful
-                
-                
+                if(rand.nextInt()%2==0){
+                    p.incScorePoint();
+                    continue;
+                }
+                else{
+                    System.out.println("Flee attempt unsuccessful");
+                }
                 System.out.println("Prepare for battle!");
                 System.out.println("Press any letter then ENTER to continue...");
                 // Read entered letter from the console
-                
+                scan.next();
+           
                 // Player is in the battle field and use special move
+                p.useSpecialMove();
                 // In the battle field, the player wins 60% times
                 // and lose 40% times
                 // If player wins, increase two score points and player win.
                 // Otherwise, player lose, decrease 1 health point.
+                if(rand.nextInt(100)>39){
+                    p.incScorePoint();
+                    p.incScorePoint();
+                    System.out.println("Player wins!");
+                }
+                else{
+                    p.decHealthPoint();
+                    System.out.println("Player lose!");
+                }
                 
                 // If the player has no health point, display 
                 // "sorry, you ran out of health!" and come out of the loop
-                
+                if(p.getHealthPoint()<=0){
+                    System.out.println("Sorry, you ran out of health");
+                    break;
+                }
             } 
             System.out.println("\nWhat would you like to do?");
             System.out.println("{?}Status Report || {n}{s}{e}{w} Move 1 Space North, "

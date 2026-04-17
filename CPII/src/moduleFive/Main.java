@@ -43,6 +43,10 @@ public class Main {
         }
         
         System.out.println(emp.estimatedMonthlySalary());
+        System.out.println(emp.getOrgName());
+        
+        Organization objOrg = emp;
+        System.out.println(objOrg.getFullName());
         
         
     }

@@ -8,7 +8,7 @@ package moduleFive;
  *
  * @author rlal
  */
-public abstract class Employee {
+public abstract class Employee implements Organization{
     private String firstName;
     private String lastName;
     private String SSN;
@@ -52,6 +52,7 @@ public abstract class Employee {
         this.SSN = SSN;
     }
     
+    @Override
     public String getFullName(){
         return lastName + ", "+ firstName;
     }
